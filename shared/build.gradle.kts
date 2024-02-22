@@ -12,7 +12,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "feature"
+            baseName = "shared"
             isStatic = true
         }
     }
@@ -23,6 +23,11 @@ kotlin {
                 implementation(domain)
                 implementation(core)
             }
+            libs.precompose.apply {
+                implementation(core)
+                implementation(viewmodel)
+                implementation(koin)
+            }
             compose.apply {
                 implementation(runtime)
                 implementation(foundation)
@@ -32,6 +37,7 @@ kotlin {
             libs.coil.apply {
                 implementation(core)
                 implementation(compose)
+                implementation(network)
             }
             libs.ktor.apply {
                 implementation(core)
@@ -47,6 +53,8 @@ kotlin {
                 implementation(compose.flow)
             }
             implementation(libs.kotlinx.collections.immutable)
+
+            implementation(libs.touchlab)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
