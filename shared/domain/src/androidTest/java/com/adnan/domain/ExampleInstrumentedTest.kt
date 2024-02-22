@@ -1,4 +1,4 @@
-package com.adnan.core
+package com.adnan.domain
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -6,4 +6,5 @@ package com.adnan.core
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleInstrumentedTest {
+
 }
