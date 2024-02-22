@@ -20,3 +20,4 @@ rootProject.name = "Adnan-Bama-Test"
 include(":androidApp")
 include(":shared")
 include(":shared:data")
+include(":shared:core")
