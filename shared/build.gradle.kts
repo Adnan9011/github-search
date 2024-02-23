@@ -22,6 +22,7 @@ kotlin {
             projects.shared.apply {
                 implementation(domain)
                 implementation(core)
+                implementation(di)
             }
             libs.precompose.apply {
                 implementation(core)

@@ -5,9 +5,9 @@ import coil3.ImageLoader
 import coil3.annotation.ExperimentalCoilApi
 import coil3.compose.setSingletonImageLoaderFactory
 import coil3.fetch.NetworkFetcher
+import com.adnan.app.di.ProvideModules
 import com.adnan.app.navigation.Destinations
 import com.adnan.app.presentation.home.HomeScreen
-import com.adnan.navigation.di.ProvideModules
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
