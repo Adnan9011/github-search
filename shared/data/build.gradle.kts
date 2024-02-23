@@ -20,6 +20,10 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
 
+            projects.shared.apply {
+                implementation(core)
+            }
+
             implementation(libs.kotlinx.serialization)
 
             implementation(libs.koin.core)
