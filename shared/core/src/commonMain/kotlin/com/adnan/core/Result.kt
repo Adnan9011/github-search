@@ -1,20 +1,16 @@
 package com.adnan.core
 
-/*
- V = Value
- E = Error
- */
-sealed class Result<out V, out E> {
+sealed class Result<out V> {
 
-    object Loading : Result<Nothing, Nothing>()
-    data class Success<out V : Any?>(val value: V) : Result<V, Nothing>()
-    data class Failure<out E : Any?>(val error: E) : Result<Nothing, E>()
+    object Loading : Result<Nothing>()
+    data class Success<out V : Any?>(val value: V) : Result<V>()
+    data class Failure(val error: Error) : Result<Nothing>()
 }
 
-inline fun <V, reified E : Any?> Result<V, E>.fold(
+inline fun <V> Result<V>.fold(
     loading: (Unit) -> Unit,
     success: (V) -> Unit,
-    failure: (E) -> Unit
+    failure: (Error) -> Unit
 ) =
     when (this) {
         is Result.Loading -> loading(Unit)
@@ -22,7 +18,7 @@ inline fun <V, reified E : Any?> Result<V, E>.fold(
         is Result.Failure -> failure(error)
     }
 
-inline fun <V, U, reified E : Any?> Result<V, E>.map(transform: (V) -> U): Result<U, E> {
+inline fun <V, U> Result<V>.map(transform: (V) -> U): Result<U> {
 
     return when (this) {
         Result.Loading -> Result.Loading

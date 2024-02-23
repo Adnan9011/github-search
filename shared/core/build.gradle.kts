@@ -16,8 +16,7 @@ kotlin {
         }
     }
 
-    sourceSets {
-    }
+    sourceSets {}
 }
 
 android {
