@@ -5,5 +5,5 @@ import com.adnan.app.presentation.home.HomeViewModel
 import org.koin.dsl.module
 
 val featureModule = module {
-    viewModelDefinition { HomeViewModel() }
+    viewModelDefinition { HomeViewModel(get()) }
 }
