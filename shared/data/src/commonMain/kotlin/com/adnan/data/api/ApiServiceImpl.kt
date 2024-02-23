@@ -16,7 +16,7 @@ class ApiServiceImpl(val httpClient: HttpClient) : ApiService {
             emit(Result.Loading)
 
             try {
-                val url = "orgs/$org/repos"
+                val url = "orgs/$org/repos?per_page=100"
                 val responseBody = httpClient.get(url) {}.body<List<RepoApiModel>>()
 
                 emit(Result.Success(responseBody))

@@ -16,7 +16,6 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.header
-import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.Dispatchers
@@ -37,7 +36,8 @@ val dataModule = module {
             }
             install(DefaultRequest) {
                 url(Rout.BASE_URL)
-                header(HttpHeaders.ContentType, ContentType.Application.Json)
+                header("X-GitHub-Api-Version", "2022-11-28")
+                header(HttpHeaders.Accept, "application/vnd.github+json")
             }
             install(ContentNegotiation) {
                 json(Json {
