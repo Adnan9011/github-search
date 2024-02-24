@@ -2,28 +2,20 @@
 
 ## Requirements
 
-- [ ] Using Jetpack Compose instead of XML with no performance issues and unnecessary recompositions
-- [ ] Using Kotlin Coroutines
-- [ ] Following Clean Architecture
-- [ ] The application must be runnable and crash-free
-- [ ] Using git version control in a proper way
-
-## Features
-
-- [ ] Implement Jetpack Compose for UI
-- [ ] Utilize Kotlin Coroutines for asynchronous programming
-- [ ] Follow Clean Architecture principles for a well-structured codebase
-- [ ] Ensure the application is stable and free of crashes
-- [ ] Use git version control effectively for collaboration and code management
+- [x] Using Jetpack Compose instead of XML with no performance issues and unnecessary recompositions
+- [x]  Using Kotlin Coroutines
+- [x] Following Clean Architecture
+- [x] The application must be runnable and crash-free
+- [x] Using git version control in a proper way
 
 ## Bonus Features
 
 Consider implementing the following additional features to enhance the project:
 
 - [ ] Write tests for better code quality and reliability
-- [ ] Use KMP libraries such as Ktor for networking and Korin for dependency injection
-- [ ] Modularize the project for better scalability and maintainability
-- [ ] Explore KMP (Kotlin Multiplatform) for shared code across platforms
+- [x] Use KMP libraries such as Ktor for networking and Korin for dependency injection
+- [x] Modularize the project for better scalability and maintainability
+- [x] Explore KMP (Kotlin Multiplatform) for shared code across platforms
 
 ## Features
 
